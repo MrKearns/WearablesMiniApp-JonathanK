@@ -20,9 +20,9 @@ struct ContentView: View {
     
 
     
-    @State var fortuneText = ""
-    @State var eightball = Image(systemName: "08.circle")
-    @State var thisTriangle = Image(systemName: "triangle")
+    var fortuneText = ""
+    var eightball = Image(systemName: "08.circle")
+    var thisTriangle = Image(systemName: "triangle")
 
 // -------------------------------------------------------------
         
@@ -34,8 +34,6 @@ struct ContentView: View {
             } else {
                 startView
             }
-            
-            
         }
     }
         
@@ -98,11 +96,6 @@ struct ContentView: View {
                     .matchedGeometryEffect(id: "8ball", in: animation)
                     .frame(width: 150, height: 150.0)
                     .foregroundColor(.purple)
-                
-//                eightball
-//                    .resizable()
-//                    .frame(width: 150, height: 150)
-//                    .padding(.bottom)
                 
                 Text(Self.fortune.randomElement()!)
                     .fontWeight(.ultraLight)
